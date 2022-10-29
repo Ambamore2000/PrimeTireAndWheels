@@ -15,3 +15,11 @@
 #about h1 {
     text-align: center;
 }
+
+#team_head {
+    column-count: 3;
+}
+
+#team_sub {
+    column-count: 4;
+}
