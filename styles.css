@@ -11,3 +11,7 @@
 #about {
     clear: both;
 }
+
+#about h1 {
+    text-align: center;
+}
