@@ -1,4 +1,13 @@
 #intro img {
     width: 50%;
     height: 50%;
+    float: left;
+}
+
+#intro p {
+    float: left;
+}
+
+#about {
+    clear: both;
 }
