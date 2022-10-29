@@ -18,8 +18,10 @@
 
 #team_head {
     column-count: 3;
+    text-align: center;
 }
 
 #team_sub {
     column-count: 2;
+    text-align: center;
 }
