@@ -1,0 +1,27 @@
+/*******************************
+********* NAVIGATION ***********
+********************************/
+
+.nav {
+    background-color: rgb(31, 31, 31);
+    overflow: hidden;
+}
+
+.nav a {
+    float: right;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 15px 15px;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    background-color: white;
+    color: black;
+}
+
+.nav a.active {
+    background-color: #FF8080;
+    color: white;
+}
