@@ -2,6 +2,10 @@
 *********** SERVICES ***********
 ********************************/
 
+#services h1 {
+    text-align: center;
+}
+
 #services ul {
     column-count: 2;
 }
