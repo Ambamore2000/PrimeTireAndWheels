@@ -13,7 +13,8 @@
 }
 
 #intro p {
-    float: right;
+    padding-left: 25px;
+    float: left;
 }
 
 /*******************************
