@@ -36,6 +36,12 @@
 ************* TEAM *************
 ********************************/
 
+#team {
+    padding-top: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
 #team_head {
     column-count: 3;
     text-align: center;
