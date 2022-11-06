@@ -3,7 +3,7 @@
 ********************************/
 
 #intro {
-    margin-top: 5%;
+    margin-top: 20%;
 }
 
 #intro img {
@@ -13,7 +13,7 @@
 }
 
 #intro p {
-    float: left;
+    float: right;
 }
 
 /*******************************
