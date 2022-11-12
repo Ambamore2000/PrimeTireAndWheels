@@ -105,6 +105,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </label>
                 <br><span class="error" id="review_message_error"><?=$review_message_error?></span><br>
                 <input type="submit"/>
+                <br><span><?=$processed_message?></span><br>
             </form>
             <h2>PAST REVIEW</h2>
         </div>
