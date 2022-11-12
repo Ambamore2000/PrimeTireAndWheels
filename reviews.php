@@ -89,7 +89,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <label><input type="text" name="first_name" placeholder="First Name"></label>
                 <span class="error" id="first_name_error"></span><br>
                 <label><input type="text" name="last_name" placeholder="Last Name"></label>
-                <br>
+                <span class="error" id="last_name_error"></span><br>
                 <label><input type="text" name="email" placeholder="E-Mail"></label>
                 <br>
                 <fieldset>
