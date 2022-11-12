@@ -98,6 +98,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <label><input type="radio" name="rating" value="3"/>3</label>
                     <label><input type="radio" name="rating" value="2"/>2</label>
                     <label><input type="radio" name="rating" value="1"/>1</label>
+                    <br><span class="error" id="rating_error">a</span>
                 </fieldset>
                 <label>
                     <textarea name="review_message" rows="5" cols="50" placeholder="Type your review here..."></textarea>
