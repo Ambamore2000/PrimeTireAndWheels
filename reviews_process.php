@@ -12,4 +12,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         $rating = $_POST["rating"];
     }
+
+    if (empty($_POST["first_name"])) {
+        $first_name_error =  "First name is required.";
+        $is_valid_data = false;
+    } else {
+        $first_name = $_POST["first_name"];
+    }
 }
