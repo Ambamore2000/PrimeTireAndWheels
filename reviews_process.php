@@ -33,12 +33,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
-
     if (!empty($_POST["email"])) {
         $email = $_POST["email"];
         if (!preg_match("/^[\w]+@([\w]+\.)+[\w]{2,63}$/", $email)) {
             $email_error =  "Email is invalid.";
             $is_valid_data = false;
         }
+    }
+
+    if (empty($_POST["review_message"])) {
+        $review_message_error = "Review message is required.";
+        $is_valid_data = false;
+    } else {
+        $review_message = $_POST["review_message"];
     }
 }
