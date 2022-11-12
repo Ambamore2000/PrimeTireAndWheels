@@ -6,4 +6,10 @@ $rating_error = $first_name_error = $last_name_error = $email_error = $review_me
 $is_valid_data = true;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (empty($_POST["rating"])) {
+        $rating_error = "Rating is required.";
+        $is_valid_data = false;
+    } else {
+        $rating = $_POST["rating"];
+    }
 }
