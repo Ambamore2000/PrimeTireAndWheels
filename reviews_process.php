@@ -47,4 +47,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         $review_message = $_POST["review_message"];
     }
+
+    if ($is_valid_data) {
+        $full_name = $first_name;
+        if ($last_name) {
+            $full_name .= " " . $last_name;
+        }
+        if ($email) {
+            $full_name .= " (" . $email . ")";
+        }
+
+        $processed_message = "Thank you " . $full_name . " for submitting your review. " .
+            "You have submitted a " . $rating . "/5 review with the message:" . $review_message;
+    }
 }
