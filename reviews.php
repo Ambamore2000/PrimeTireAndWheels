@@ -103,7 +103,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <label>
                     <textarea name="review_message" rows="5" cols="50" placeholder="Type your review here..."></textarea>
                 </label>
-                <br>
+                <br><span class="error" id="review_message_error"></span><br>
                 <input type="submit"/>
             </form>
             <h2>PAST REVIEW</h2>
