@@ -20,7 +20,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $first_name = $_POST["first_name"];
 
         if (!preg_match("/^[a-zA-Z]+$/", $first_name)) {
-            $first_name_error = "First name can only include alphabets";
+            $first_name_error = "First name can only include alphabets.";
+            $is_valid_data = false;
+        }
+    }
+
+    if (!empty($_POST["last_name"])) {
+        $last_name = $_POST["last_name"];
+        if (!preg_match("/^[a-zA-Z]+$/", $last_name)) {
+            $last_name_error = "Last name can only include alphabets.";
             $is_valid_data = false;
         }
     }
