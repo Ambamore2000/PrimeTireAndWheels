@@ -91,7 +91,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <label><input type="text" name="last_name" placeholder="Last Name"></label>
                 <span class="error" id="last_name_error"><?=$last_name_error?></span><br>
                 <label><input type="text" name="email" placeholder="E-Mail"></label>
-                <span class="error" id="email_error"></span><br>
+                <span class="error" id="email_error"><?=$email_error?></span><br>
                 <fieldset>
                     <label><input type="radio" name="rating" value="5"/>5</label>
                     <label><input type="radio" name="rating" value="4"/>4</label>
