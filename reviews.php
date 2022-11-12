@@ -21,7 +21,7 @@
             <h2>RATING</h2>
             <!--TODO: Get Reviews Data; Sum(All Ratings)/5 = Rating -->
             <h2>LEAVE REVIEW</h2>
-            <form action="review_process.php" method="post">
+            <form action="reviews_process.php" method="post">
                 <label><input type="text" name="first_name" placeholder="First Name"></label>
                 <label><input type="text" name="last_name" placeholder="Last Name"></label>
                 <br>
