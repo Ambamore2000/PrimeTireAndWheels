@@ -1,3 +1,4 @@
+<?php include("reviews_process.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
