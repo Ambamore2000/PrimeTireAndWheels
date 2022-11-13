@@ -33,8 +33,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
-    if (!empty($_POST["email"])) {
+
+    if (empty($_POST["first_name"])) {
+        $first_name_error =  "First name is required.";
+        $is_valid_data = false;
+    } else {
+        $first_name = $_POST["first_name"];
+
+        if (!preg_match("/^[a-zA-Z]+$/", $first_name)) {
+            $first_name_error = "First name can only include alphabets.";
+            $is_valid_data = false;
+        }
+    }
+    if (empty($_POST["email"])) {
+        $email_error =  "Email is required.";
+        $is_valid_data = false;
+    } else {
         $email = $_POST["email"];
+
         if (!preg_match("/^[\w]+@([\w]+\.)+[\w]{2,63}$/", $email)) {
             $email_error =  "Email is invalid.";
             $is_valid_data = false;
