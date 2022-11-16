@@ -80,7 +80,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <a href="appointment.html">Appointment</a>
             <a href="contact.html">Contact</a>
             <a class="active" href="reviews.php">Reviews</a>
-            <a href="services.html">Services</a>
+            <a href="services.php">Services</a>
             <a href="index.html">Home</a>
         </div>
 
