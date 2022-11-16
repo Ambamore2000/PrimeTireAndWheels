@@ -12,7 +12,7 @@
             <a href="appointment.html">Appointment</a>
             <a href="contact.html">Contact</a>
             <a href="reviews.php">Reviews</a>
-            <a class="active" href="services.html">Services</a>
+            <a class="active" href="services.php">Services</a>
             <a href="index.html">Home</a>
         </div>
 
