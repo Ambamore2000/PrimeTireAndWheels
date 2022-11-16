@@ -2,6 +2,10 @@
 *********** CONTACT ************
 ********************************/
 
+#contact {
+    padding-top: 50px;
+}
+
 #contact h1 {
     text-align: center;
 }
