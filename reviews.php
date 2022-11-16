@@ -70,6 +70,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <html lang="en">
     <head>
         <title>Reviews</title>
+        <link rel="stylesheet" href="normalize.css">
         <link rel="stylesheet" href="reviews.css">
         <link rel="stylesheet" href="nav.css">
     </head>

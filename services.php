@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <title>Services</title>
+        <link rel="stylesheet" href="normalize.css">
         <link rel="stylesheet" href="services.css">
         <link rel="stylesheet" href="nav.css">
     </head>
