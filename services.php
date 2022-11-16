@@ -20,6 +20,14 @@
             <h1>SERVICES</h1>
             <h2>SERVICES OFFERED</h2>
             <ul>
+                <?php
+                foreach(file("services.txt", FILE_IGNORE_NEW_LINES) as $service_info) {
+                    list($service_name, $service_desc) = explode(":", $service_info);
+                    ?>
+                    <li><?=$service_name?> - <?=$service_desc?></li>
+                    <?php
+                }
+                ?>
                 <li>Run-Flat Tire Services</li>
                 <li>Custom Wheels & Rims</li>
                 <li>Seasonal Tire Installation</li>
