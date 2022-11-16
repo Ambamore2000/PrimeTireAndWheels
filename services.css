@@ -18,3 +18,7 @@
     width: 150px;
     height: 150px;
 }
+
+.services:hover {
+    font-weight: bold;
+}

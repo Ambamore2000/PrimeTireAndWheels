@@ -4,7 +4,6 @@
         <title>Services</title>
         <link rel="stylesheet" href="services.css">
         <link rel="stylesheet" href="nav.css">
-        <script src="services.js" type="text/javascript"></script>
     </head>
     <body>
         <div class="nav">
@@ -25,7 +24,7 @@
                 foreach(file("services.txt", FILE_IGNORE_NEW_LINES) as $service_info) {
                     list($service_name, $service_desc) = explode(":", $service_info);
                     ?>
-                    <li title="<?=$service_desc?>"><?=$service_name?></li>
+                    <li title="<?=$service_desc?>" class="services"><?=$service_name?></li>
                     <?php
                 }
                 ?>

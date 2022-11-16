@@ -1,3 +1,0 @@
-function displayServiceDesc(description) {
-
-}
