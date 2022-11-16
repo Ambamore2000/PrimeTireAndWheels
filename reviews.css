@@ -2,6 +2,10 @@
 *********** REVIEWS ************
 ********************************/
 
+#reviews {
+    padding-top: 50px;
+}
+
 #reviews h1 {
     text-align: center;
 }
