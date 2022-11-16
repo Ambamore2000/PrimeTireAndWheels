@@ -29,16 +29,6 @@
                     <?php
                 }
                 ?>
-                <li>Run-Flat Tire Services</li>
-                <li>Custom Wheels & Rims</li>
-                <li>Seasonal Tire Installation</li>
-                <li>Tire Installation</li>
-                <li>Tire Rotation</li>
-                <li>Custom Tires</li>
-                <li>Virtual Consultations</li>
-                <li>Tire Balancing</li>
-                <li>Tire Repair</li>
-                <li>Tire Pressure Monitoring Service Repair</li>
             </ul>
 
             <div id="cars">
