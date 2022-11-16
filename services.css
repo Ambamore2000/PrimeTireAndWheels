@@ -2,6 +2,10 @@
 *********** SERVICES ***********
 ********************************/
 
+#services {
+    padding-top: 50px;
+}
+
 #services h1 {
     text-align: center;
 }
