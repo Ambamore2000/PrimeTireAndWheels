@@ -24,7 +24,7 @@
                 foreach(file("services.txt", FILE_IGNORE_NEW_LINES) as $service_info) {
                     list($service_name, $service_desc) = explode(":", $service_info);
                     ?>
-                    <li><?=$service_name?> - <?=$service_desc?></li>
+                    <li onmouseover="displayServiceDesc(<?=$service_desc?>)"><?=$service_name?> - <?=$service_desc?></li>
                     <?php
                 }
                 ?>
