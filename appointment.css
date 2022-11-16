@@ -2,6 +2,10 @@
 ********* APPOINTMENT **********
 ********************************/
 
+#appointment {
+    padding-top: 50px;
+}
+
 #appointment h1 {
     text-align: center;
 }
