@@ -4,6 +4,7 @@
         <title>Services</title>
         <link rel="stylesheet" href="services.css">
         <link rel="stylesheet" href="nav.css">
+        <script src="services.js" type="text/javascript"></script>
     </head>
     <body>
         <div class="nav">
