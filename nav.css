@@ -2,7 +2,7 @@
 ********* NAVIGATION ***********
 ********************************/
 
-.nav {
+#nav {
     background-color: rgb(31, 31, 31);
     overflow: hidden;
     position: fixed;
@@ -10,7 +10,7 @@
     width: 100%;
 }
 
-.nav a {
+#nav a {
     float: right;
     color: white;
     text-align: center;
@@ -19,12 +19,12 @@
     text-decoration: none;
 }
 
-.nav a:hover {
+#nav a:hover {
     background-color: white;
     color: black;
 }
 
-.nav a.active {
+#nav a.active {
     background-color: #FF8080;
     color: white;
 }
