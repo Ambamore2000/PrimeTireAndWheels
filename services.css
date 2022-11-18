@@ -14,9 +14,24 @@
     column-count: 2;
 }
 
+#services h2 {
+    padding-top: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+#services li {
+    margin-left: 50px;
+}
+
 /*******************************
 *********** CARS_IMG ***********
 ********************************/
+
+#cars_img {
+    padding-left: 50px;
+    padding-right: 50px;
+}
 
 #cars_img img{
     width: 150px;
