@@ -84,7 +84,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <h2>RATING</h2>
             <!--TODO: Get Reviews Data; Sum(All Ratings)/5 = Rating -->
             <h2>LEAVE REVIEW</h2>
-            <form action="" method="post">
+            <form id="form" action="" method="post">
                 <label><input type="text" name="first_name" placeholder="First Name"></label>
                 <span class="error" id="first_name_error"><?=$first_name_error?></span><br>
                 <label><input type="text" name="last_name" placeholder="Last Name"></label>
