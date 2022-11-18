@@ -9,3 +9,8 @@
 #appointment h1 {
     text-align: center;
 }
+
+#form {
+    padding-left: 25px;
+    padding-right: 25px;
+}
