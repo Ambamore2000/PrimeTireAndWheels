@@ -17,5 +17,10 @@
 
 #extra_info {
     padding-left: 50px;
-    padding-right: 50px;
+    padding-right: 150px;
+}
+
+#extra_info img, iframe {
+    width: 50%;
+    float: left;
 }
