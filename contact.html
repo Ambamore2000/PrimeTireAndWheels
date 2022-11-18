@@ -5,16 +5,10 @@
         <link rel="stylesheet" href="normalize.css">
         <link rel="stylesheet" href="contact.css">
         <link rel="stylesheet" href="nav.css">
+        <script src="nav.js" type="text/javascript"></script>
     </head>
-    <body>
-        <div class="nav">
-            <!--TODO: Fix image sizing... crop? new logo?
-            <img src="img/logo.png" alt="Logo">-->
-            <a href="appointment.html">Appointment</a>
-            <a class="active" href="contact.html">Contact</a>
-            <a href="reviews.php">Reviews</a>
-            <a href="services.php">Services</a>
-            <a href="index.html">Home</a>
+    <body onload="loadNavBar('contact.html')">
+        <div id="nav">
         </div>
 
         <div id="contact">

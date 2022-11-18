@@ -73,16 +73,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <link rel="stylesheet" href="normalize.css">
         <link rel="stylesheet" href="reviews.css">
         <link rel="stylesheet" href="nav.css">
+        <script src="nav.js" type="text/javascript"></script>
     </head>
-    <body>
-        <div class="nav">
-            <!--TODO: Fix image sizing... crop? new logo?
-            <img src="img/logo.png" alt="Logo">-->
-            <a href="appointment.html">Appointment</a>
-            <a href="contact.html">Contact</a>
-            <a class="active" href="reviews.php">Reviews</a>
-            <a href="services.php">Services</a>
-            <a href="index.html">Home</a>
+    <body onload="loadNavBar('reviews.php')">
+        <div id="nav">
         </div>
 
         <div id="reviews">
