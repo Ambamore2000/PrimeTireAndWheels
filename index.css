@@ -8,13 +8,13 @@
 
 #intro img {
     padding-left: 25px;
+    padding-right: 25px;
     width: 45%;
     float: left;
 }
 
 #intro p {
     padding-left: 25px;
-    float: left;
 }
 
 #intro h1 {
