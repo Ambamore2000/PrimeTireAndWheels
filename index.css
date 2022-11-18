@@ -47,7 +47,15 @@
     text-align: center;
 }
 
+#team_head img {
+    width: 75%;
+}
+
 #team_sub {
     column-count: 2;
     text-align: center;
+}
+
+#team_sub img {
+    width: 35%;
 }
