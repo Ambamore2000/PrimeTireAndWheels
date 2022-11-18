@@ -9,3 +9,13 @@
 #contact h1 {
     text-align: center;
 }
+
+#contact p {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+#extra_info {
+    padding-left: 50px;
+    padding-right: 50px;
+}
