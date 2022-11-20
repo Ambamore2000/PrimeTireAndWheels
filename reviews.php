@@ -75,7 +75,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <link rel="stylesheet" href="nav.css">
         <script src="nav.js" type="text/javascript"></script>
     </head>
-    <body onload="loadNavBar('reviews.php')">
+    <body>
         <div id="nav">
         </div>
 

@@ -8,7 +8,7 @@
         <script src="nav.js" type="text/javascript"></script>
         <script src="services.js" type="text/javascript"></script>
     </head>
-    <body onload="loadNavBar('services.php')">
+    <body>
         <div id="nav">
         </div>
 
@@ -44,7 +44,7 @@
                     <img id="12" src="img/cars/car_placeholder_two.png" alt="Car" >
                 </div>
 
-                <button onclick="doThis();">Click me</button>
+                <button id="ok">Click me</button>
             </div>
         </div>
 

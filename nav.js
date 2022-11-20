@@ -8,14 +8,17 @@ function getATag(hyperlink, text, current) {
     return aTag;
 }
 
-function loadNavBar(current) {
+function loadNavBar() {
+    let path = window.location.pathname;
+    let page = path.split("/").pop();
+
     let nav_element = document.getElementById("nav");
 
-    let appointmentATag = getATag("appointment.html", "Appointment", current);
-    let contactATag = getATag("contact.html", "Contact", current);
-    let reviewsATag = getATag("reviews.php", "Reviews", current);
-    let servicesATag = getATag("services.php", "Services", current);
-    let homeATag = getATag("index.html", "Home", current);
+    let appointmentATag = getATag("appointment.html", "Appointment", page);
+    let contactATag = getATag("contact.html", "Contact", page);
+    let reviewsATag = getATag("reviews.php", "Reviews", page);
+    let servicesATag = getATag("services.php", "Services", page);
+    let homeATag = getATag("index.html", "Home", page);
 
     nav_element.appendChild(appointmentATag);
     nav_element.appendChild(contactATag);
@@ -23,3 +26,5 @@ function loadNavBar(current) {
     nav_element.appendChild(servicesATag);
     nav_element.appendChild(homeATag);
 }
+
+window.onload = loadNavBar;
