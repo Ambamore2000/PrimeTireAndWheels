@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="services.css">
         <link rel="stylesheet" href="nav.css">
         <script src="nav.js" type="text/javascript"></script>
+        <script src="services.js" type="text/javascript"></script>
     </head>
     <body onload="loadNavBar('services.php')">
         <div id="nav">
