@@ -29,17 +29,18 @@
                 <h2>CARS WE SERVICE</h2>
 
                 <div id="cars_img">
-                    <img src="img/cars/car_placeholder.png" alt="Car" >
-                    <img src="img/cars/car_placeholder.png" alt="Car" >
-                    <img src="img/cars/car_placeholder.png" alt="Car" >
-                    <img src="img/cars/car_placeholder.png" alt="Car" >
-                    <img src="img/cars/car_placeholder.png" alt="Car" >
-                    <img src="img/cars/car_placeholder.png" alt="Car" >
-                    <img src="img/cars/car_placeholder.png" alt="Car" >
-                    <img src="img/cars/car_placeholder.png" alt="Car" >
-                    <img src="img/cars/car_placeholder.png" alt="Car" >
-                    <img src="img/cars/car_placeholder.png" alt="Car" >
-                    <img src="img/cars/car_placeholder.png" alt="Car" >
+                    <img id="1" src="img/cars/car_placeholder.png" alt="Car" >
+                    <img id="2" src="img/cars/car_placeholder_two.png" alt="Car" >
+                    <img id="3" src="img/cars/car_placeholder.png" alt="Car" >
+                    <img id="4" src="img/cars/car_placeholder_two.png" alt="Car" >
+                    <img id="5" src="img/cars/car_placeholder.png" alt="Car" >
+                    <img id="6" src="img/cars/car_placeholder_two.png" alt="Car" >
+                    <img id="7" src="img/cars/car_placeholder.png" alt="Car" >
+                    <img id="8" src="img/cars/car_placeholder_two.png" alt="Car" >
+                    <img id="9" src="img/cars/car_placeholder.png" alt="Car" >
+                    <img id="10" src="img/cars/car_placeholder_two.png" alt="Car" >
+                    <img id="11" src="img/cars/car_placeholder.png" alt="Car" >
+                    <img id="12" src="img/cars/car_placeholder_two.png" alt="Car" >
                 </div>
             </div>
         </div>
