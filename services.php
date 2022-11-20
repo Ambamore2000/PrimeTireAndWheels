@@ -42,6 +42,8 @@
                     <img id="11" src="img/cars/car_placeholder.png" alt="Car" >
                     <img id="12" src="img/cars/car_placeholder_two.png" alt="Car" >
                 </div>
+
+                <button onclick="doThis();">Click me</button>
             </div>
         </div>
 
