@@ -29,15 +29,42 @@
 ********************************/
 
 #cars_img {
+    display: flex;
+    white-space: nowrap;
+    justify-content: center;
     padding-left: 50px;
     padding-right: 50px;
+    column-count: 8;
 }
 
 #cars_img img{
-    width: 150px;
-    height: 150px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 10%;
+    height: auto;
 }
 
 .services:hover {
     font-weight: bold;
+}
+
+/*******************************
+*********** UHHHHHHH ***********
+********************************/
+.cars_hidden {
+    display: none;
+}
+
+.cars_show {
+    animation: taadaa 2s;
+}
+
+@keyframes taadaa {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
