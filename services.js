@@ -1,54 +1,41 @@
-let badVariable = 8;
+const COLUMN_COUNT = 8;
 
 function doThis() {
     let carsDiv = document.getElementById("cars_img");
     let carsList = carsDiv.children;
 
-    if (badVariable === 0) {
-        let i;
-
-        for (i = 32 - 8; i < 32; i++) {
-            let car = carsList[i];
-            car.className = "cars_hidden";
-        }
-
-        for (i = 0; i < 8; i++) {
-            let car = carsList[i];
-            car.className = "cars_show";
-        }
-    } else {
-        let i;
-
-        for (i = badVariable - 8; i < badVariable; i++) {
-            let car = carsList[i];
-            car.className = "cars_hidden";
-        }
-
-        for (i = badVariable; i < badVariable + 8; i++) {
-            let car = carsList[i];
-            car.className = "cars_show";
-        }
-    }
-
-    badVariable += 8;
-
-    if (badVariable === 32) {
-        badVariable = 0;
-    }
-}
-
-function loadImages() {
-    let carsDiv = document.getElementById("cars_img");
-    let carsList = carsDiv.children;
+    let firstInstanceOfShow = -1;
     let i;
-    for (i = 8; i < carsList.length; i++) {
-        let car = carsList[i];
-        car.className = "cars_hidden";
+
+    for (i = 0; i < carsList.length; i++) {
+        if (carsList[i].className === "cars_show") {
+            firstInstanceOfShow = i;
+            break;
+        }
     }
+
+    for (i = firstInstanceOfShow; i < firstInstanceOfShow + COLUMN_COUNT; i++) {
+        carsList[i].className = "cars_hidden";
+    }
+
+    let firstExpression;
+    let secondExpression;
+
+    if (firstInstanceOfShow + COLUMN_COUNT >= carsList.length) {
+        firstExpression = 0;
+        secondExpression = COLUMN_COUNT;
+    } else {
+        firstExpression = firstInstanceOfShow + COLUMN_COUNT;
+        secondExpression = firstInstanceOfShow + COLUMN_COUNT*2;
+    }
+
+    for (i = firstExpression; i < secondExpression; i++) {
+        carsList[i].className = "cars_show";
+    }
+
 }
 
 function attachHandlers() {
-    loadImages();
     document.getElementById("ok").onclick = doThis;
 }
 
