@@ -86,12 +86,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <!--TODO: Get Reviews Data; Sum(All Ratings)/5 = Rating -->
             <h2>LEAVE REVIEW</h2>
             <form id="form" action="" method="post">
-                <label><input type="text" name="first_name" placeholder="First Name"></label>
-                <span class="error" id="first_name_error"><?=$first_name_error?></span><br>
-                <label><input type="text" name="last_name" placeholder="Last Name"></label>
-                <span class="error" id="last_name_error"><?=$last_name_error?></span><br>
-                <label><input type="text" name="email" placeholder="E-Mail"></label>
-                <span class="error" id="email_error"><?=$email_error?></span><br>
+                <div class="row">
+                    <div class="column">
+                        <label><input type="text" name="first_name" placeholder="First Name"></label><br>
+                        <span class="error" id="first_name_error"><?=$first_name_error?></span>
+                    </div>
+                    <div class="column">
+                        <label><input type="text" name="last_name" placeholder="Last Name"></label><br>
+                        <span class="error" id="last_name_error"><?=$last_name_error?></span>
+                    </div>
+                    <div class="column">
+                        <label><input type="text" name="email" placeholder="E-Mail"></label><br>
+                        <span class="error" id="email_error"><?=$email_error?></span>
+                    </div>
+                </div>
+                <br>
                 <div id="stars">
                     <img src="/img/star-empty.png" id="1" alt="1">
                     <img src="/img/star-empty.png" id="2" alt="2">
@@ -99,11 +108,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <img src="/img/star-empty.png" id="4" alt="4">
                     <img src="/img/star-empty.png" id="5" alt="5">
                 </div>
-                <span class="error" id="rating_error"><?=$rating_error?></span><br>
+                <span class="error" id="rating_error"><?=$rating_error?></span><br><br>
                 <label>
-                    <textarea name="review_message" rows="5" cols="50" placeholder="Type your review here..."></textarea>
+                    <textarea id="review_message" name="review_message" placeholder="Type your review here..." ></textarea>
                 </label>
-                <br><span class="error" id="review_message_error"><?=$review_message_error?></span><br>
+                <span class="error" id="review_message_error"><?=$review_message_error?></span><br><br>
                 <input type="submit"/>
                 <br><span><?=$processed_message?></span><br>
             </form>

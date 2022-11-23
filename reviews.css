@@ -19,8 +19,8 @@
 ************ FORM **************
 ********************************/
 #form {
-    padding-left: 50px;
-    padding-right: 50px;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 
@@ -37,4 +37,19 @@
  */
 #stars img{
     width: 5%;
+}
+.row {
+    display: flex;
+}
+
+.column {
+    flex: 33%;
+    min-width: 0;
+    min-height: 0;
+    overflow: hidden;
+}
+
+#review_message {
+    resize: none;
+    width: 100%;
 }
