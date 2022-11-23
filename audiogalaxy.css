@@ -4,7 +4,7 @@ body {
     background-image: url("img/bg.png");
     background-size: 25%;
     background-repeat: repeat;
-    box-shadow: inset 0 0 0 1000px rgba(255, 0, 0, 0.2);
+    box-shadow: inset 0 0 0 1000px rgba(255, 0, 0, 0.1);
     min-height: 100%;
 }
 html {
@@ -29,6 +29,6 @@ h3 {
     font-size: 2.5vw;
 }
 
-p, ul {
+p, ul, a, input, textarea, span {
     font-size: 2vw;
 }

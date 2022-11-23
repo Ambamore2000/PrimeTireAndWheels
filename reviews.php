@@ -85,6 +85,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <h1>REVIEWS</h1>
             <h2>RATING</h2>
             <!--TODO: Get Reviews Data; Sum(All Ratings)/5 = Rating -->
+        </div>
+
+        <div class="section">
             <h2>LEAVE REVIEW</h2>
             <form id="form" action="" method="post">
                 <div class="row">
@@ -101,7 +104,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <span class="error" id="email_error"><?=$email_error?></span>
                     </div>
                 </div>
-                <br>
                 <div id="stars">
                     <img src="/img/star-empty.png" id="1" alt="1">
                     <img src="/img/star-empty.png" id="2" alt="2">
@@ -109,14 +111,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <img src="/img/star-empty.png" id="4" alt="4">
                     <img src="/img/star-empty.png" id="5" alt="5">
                 </div>
-                <span class="error" id="rating_error"><?=$rating_error?></span><br><br>
+                <span class="error" id="rating_error"><?=$rating_error?></span>
                 <label>
                     <textarea id="review_message" name="review_message" placeholder="Type your review here..." ></textarea>
                 </label>
-                <span class="error" id="review_message_error"><?=$review_message_error?></span><br><br>
+                <span class="error" id="review_message_error"><?=$review_message_error?></span><br>
                 <input type="submit"/>
                 <br><span><?=$processed_message?></span><br>
             </form>
+        </div>
+
+        <div class="section">
             <h2>PAST REVIEW</h2>
         </div>
     </body>
