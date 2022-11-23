@@ -1,57 +1,28 @@
 /*******************************
 ************ INTRO *************
 ********************************/
-body {
-    background-image: url("img/bg.png");
-    background-size: 25%;
-    background-repeat: repeat;
-    box-shadow: inset 0 0 0 1000px rgba(255, 0, 0, 0.2);
-}
 
-#intro {
-    padding-top: 50px;
-}
-
-#intro img {
-    padding-left: 25px;
-    padding-right: 25px;
+#intro_img {
     width: 45%;
     float: left;
 }
 
-#intro p {
-    padding-left: 25px;
-    padding-right: 25px;
-}
-
-#intro h1 {
-    text-align: center;
+#intro_p {
+    width: 45%;
+    float: left;
 }
 
 /*******************************
-************ ABOUT *************
+************* ABOUT ************
 ********************************/
 
 #about {
-    padding-top: 25px;
-    padding-left: 25px;
-    padding-right: 25px;
     clear: both;
-}
-
-#about h1 {
-    text-align: center;
 }
 
 /*******************************
 ************* TEAM *************
 ********************************/
-
-#team {
-    padding-top: 25px;
-    padding-left: 25px;
-    padding-right: 25px;
-}
 
 #team_head {
     column-count: 3;
