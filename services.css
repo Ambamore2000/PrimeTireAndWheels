@@ -2,31 +2,25 @@
 *********** SERVICES ***********
 ********************************/
 
-#services {
-    padding-top: 50px;
-}
-
-#services h1 {
-    text-align: center;
-}
-
 #services ul {
     column-count: 2;
-}
-
-#services h2 {
-    padding-top: 25px;
-    padding-left: 25px;
-    padding-right: 25px;
 }
 
 #services li {
     margin-left: 50px;
 }
 
+.services:hover {
+    font-weight: bold;
+}
+
 /*******************************
-*********** CARS_IMG ***********
+********** CARS_ARRAY **********
 ********************************/
+
+#cars_array {
+    text-align: center;
+}
 
 #cars_array img{
     padding-left: 10px;
@@ -43,26 +37,15 @@
     width: 10%;
 }
 
-#cars_array {
-    text-align: center;
-}
-
-.services:hover {
-    font-weight: bold;
-}
-
-/*******************************
-*********** UHHHHHHH ***********
-********************************/
 .cars_hidden {
     display: none;
 }
 
 .cars_show {
-    animation: taadaa 2s;
+    animation: fadeIn 2s;
 }
 
-@keyframes taadaa {
+@keyframes fadeIn {
     0% {
         opacity: 0;
     }
