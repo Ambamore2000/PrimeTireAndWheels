@@ -82,7 +82,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
 
         <div class="section">
-            <h1>REVIEWS</h1>
+            <h1 id="first_header">REVIEWS</h1>
             <h2>RATING</h2>
             <!--TODO: Get Reviews Data; Sum(All Ratings)/5 = Rating -->
         </div>
