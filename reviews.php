@@ -91,14 +91,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <span class="error" id="last_name_error"><?=$last_name_error?></span><br>
                 <label><input type="text" name="email" placeholder="E-Mail"></label>
                 <span class="error" id="email_error"><?=$email_error?></span><br>
-                <fieldset>
-                    <label><input type="radio" name="rating" value="5"/>5</label>
-                    <label><input type="radio" name="rating" value="4"/>4</label>
-                    <label><input type="radio" name="rating" value="3"/>3</label>
-                    <label><input type="radio" name="rating" value="2"/>2</label>
-                    <label><input type="radio" name="rating" value="1"/>1</label>
-                    <br><span class="error" id="rating_error"><?=$rating_error?></span>
-                </fieldset>
+                <img class="stars" src="/img/star-empty.png" alt="1">
+                <img class="stars" src="/img/star-empty.png" alt="2">
+                <img class="stars" src="/img/star-empty.png" alt="3">
+                <img class="stars" src="/img/star-empty.png" alt="4">
+                <img class="stars" src="/img/star-empty.png" alt="5">
+                <br><span class="error" id="rating_error"><?=$rating_error?></span>
                 <label>
                     <textarea name="review_message" rows="5" cols="50" placeholder="Type your review here..."></textarea>
                 </label>
