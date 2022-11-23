@@ -74,6 +74,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <link rel="stylesheet" href="reviews.css">
         <link rel="stylesheet" href="nav.css">
         <script src="nav.js" type="text/javascript"></script>
+        <script src="reviews.js" type="text/javascript"></script>
     </head>
     <body>
         <div id="nav">
@@ -92,11 +93,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <label><input type="text" name="email" placeholder="E-Mail"></label>
                 <span class="error" id="email_error"><?=$email_error?></span><br>
                 <div id="stars">
-                    <img src="/img/star-empty.png" alt="1">
-                    <img src="/img/star-empty.png" alt="2">
-                    <img src="/img/star-empty.png" alt="3">
-                    <img src="/img/star-empty.png" alt="4">
-                    <img src="/img/star-empty.png" alt="5">
+                    <img src="/img/star-empty.png" id="1" alt="1">
+                    <img src="/img/star-empty.png" id="2" alt="2">
+                    <img src="/img/star-empty.png" id="3" alt="3">
+                    <img src="/img/star-empty.png" id="4" alt="4">
+                    <img src="/img/star-empty.png" id="5" alt="5">
                 </div>
                 <span class="error" id="rating_error"><?=$rating_error?></span><br>
                 <label>
