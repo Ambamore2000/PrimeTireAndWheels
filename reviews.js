@@ -1,7 +1,7 @@
 function rate(amount) {
     let i;
     for (i = amount; i > 0; i--) {
-        document.getElementById(i).setAttribute("src", "/img/star-filled.png");
+        document.getElementById(i).setAttribute("src", "/img/star-filled-animation.gif");
     }
     for (i = 5; i > amount; i--) {
         document.getElementById(i).setAttribute("src", "/img/star-empty.png");
