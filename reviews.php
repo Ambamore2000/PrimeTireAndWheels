@@ -71,6 +71,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <head>
         <title>Reviews</title>
         <link rel="stylesheet" href="normalize.css">
+        <link rel="stylesheet" href="audiogalaxy.css">
         <link rel="stylesheet" href="reviews.css">
         <link rel="stylesheet" href="nav.css">
         <script src="nav.js" type="text/javascript"></script>
@@ -80,7 +81,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div id="nav">
         </div>
 
-        <div id="reviews">
+        <div class="section">
             <h1>REVIEWS</h1>
             <h2>RATING</h2>
             <!--TODO: Get Reviews Data; Sum(All Ratings)/5 = Rating -->
