@@ -14,7 +14,7 @@ function loadNavBar() {
 
     let nav_element = document.getElementById("nav");
 
-    let appointmentATag = getATag("appointment.html", "Appointment", page);
+    let appointmentATag = getATag("appointment.php", "Appointment", page);
     let contactATag = getATag("contact.html", "Contact", page);
     let reviewsATag = getATag("reviews.php", "Reviews", page);
     let servicesATag = getATag("services.php", "Services", page);

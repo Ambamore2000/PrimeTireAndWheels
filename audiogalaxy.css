@@ -44,3 +44,7 @@ h3 {
 p, ul, a, input, textarea, span {
     font-size: 2vw;
 }
+
+.error {
+    color: red;
+}

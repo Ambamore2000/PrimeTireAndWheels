@@ -7,3 +7,16 @@
     padding-left: 25px;
     padding-right: 25px;
 }
+
+.row {
+    column-count: 2;
+}
+
+input {
+    width: 100%;
+}
+#reason_message {
+    resize: none;
+    width: 100%;
+    height: 20vh;
+}
