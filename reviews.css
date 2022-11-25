@@ -20,15 +20,13 @@
 #stars img{
     width: 5%;
 }
+
 .row {
-    display: flex;
+    column-count: 3;
 }
 
-.column {
-    flex: 33%;
-    min-width: 0;
-    min-height: 0;
-    overflow: hidden;
+input {
+    width: 100%;
 }
 
 #review_message {

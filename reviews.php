@@ -91,17 +91,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <h2>LEAVE REVIEW</h2>
             <form id="form" action="" method="post">
                 <div class="row">
-                    <div class="column">
+                    <div class="column"> <!-- TODO: Fix usage of &nbsp; -->
                         <label><input type="text" name="first_name" placeholder="First Name"></label><br>
-                        <span class="error" id="first_name_error"><?=$first_name_error?></span>
+                        <span class="error" id="first_name_error"><?=$first_name_error?>&nbsp;</span>
                     </div>
                     <div class="column">
                         <label><input type="text" name="last_name" placeholder="Last Name"></label><br>
-                        <span class="error" id="last_name_error"><?=$last_name_error?></span>
+                        <span class="error" id="last_name_error"><?=$last_name_error?>&nbsp;</span>
                     </div>
                     <div class="column">
                         <label><input type="text" name="email" placeholder="E-Mail"></label><br>
-                        <span class="error" id="email_error"><?=$email_error?></span>
+                        <span class="error" id="email_error"><?=$email_error?>&nbsp;</span>
                     </div>
                 </div>
                 <div id="stars">
