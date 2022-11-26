@@ -23,7 +23,7 @@ h1, h2, img, p, .section, iframe {
 
 .section {
     padding: 2%;
-    margin: 0 5% 5% 5%;
+    margin-bottom: 8%;
     background: #fe7471;
     min-height: 100%;
 }
@@ -31,14 +31,20 @@ h1, h2, img, p, .section, iframe {
 h1 {
     font-size: 4vw;
     text-align: center;
+    text-decoration-line: underline;
+    text-decoration-thickness: 30%;
 }
 
 h2 {
     font-size: 3vw;
+    text-decoration-line: underline;
+    text-decoration-thickness: 15%;
 }
 
 h3 {
     font-size: 2.5vw;
+    text-decoration-line: underline;
+    text-decoration-thickness: 10%;
 }
 
 p, ul, a, input, textarea, span {
@@ -46,5 +52,12 @@ p, ul, a, input, textarea, span {
 }
 
 .error {
-    color: red;
+}
+
+input[type=text], textarea {
+    border: 0.25vw white inset;
+}
+
+input[type=submit] {
+    border: 0.25vw white outset;
 }

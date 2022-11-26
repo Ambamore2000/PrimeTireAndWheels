@@ -88,6 +88,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <div class="section">
             <h1>SCHEDULE APPOINTMENT</h1>
+            <br>
             <form id="form" action="" method="post">
                 <div class="row">
                     <div class="column">
