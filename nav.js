@@ -14,17 +14,17 @@ function loadNavBar() {
 
     let nav_element = document.getElementById("nav");
 
-    let appointmentATag = getATag("appointment.php", "Appointment", page);
-    let contactATag = getATag("contact.html", "Contact", page);
-    let reviewsATag = getATag("reviews.php", "Reviews", page);
-    let servicesATag = getATag("services.php", "Services", page);
     let homeATag = getATag("index.html", "Home", page);
+    let servicesATag = getATag("services.php", "Services", page);
+    let reviewsATag = getATag("reviews.php", "Reviews", page);
+    let contactATag = getATag("contact.html", "Contact", page);
+    let appointmentATag = getATag("appointment.php", "Appointment", page);
 
-    nav_element.appendChild(appointmentATag);
-    nav_element.appendChild(contactATag);
-    nav_element.appendChild(reviewsATag);
-    nav_element.appendChild(servicesATag);
     nav_element.appendChild(homeATag);
+    nav_element.appendChild(servicesATag);
+    nav_element.appendChild(reviewsATag);
+    nav_element.appendChild(contactATag);
+    nav_element.appendChild(appointmentATag);
 }
 
 window.onload = loadNavBar;

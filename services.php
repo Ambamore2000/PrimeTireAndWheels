@@ -14,7 +14,7 @@
         </div>
 
         <div class="section">
-            <h1 id="first_header">SERVICES</h1>
+            <h1>SERVICES</h1>
             <h2>SERVICES OFFERED</h2>
             <div id="services">
                 <ul>

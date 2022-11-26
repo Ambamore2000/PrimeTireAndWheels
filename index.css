@@ -1,15 +1,14 @@
-/*******************************
-************ INTRO *************
-********************************/
-
-#intro_img {
-    width: 45%;
-    float: left;
+.row {
+    column-count: 2;
 }
 
 #intro_p {
-    width: 45%;
-    float: left;
+    width: 100%;
+}
+
+#intro_img {
+    width: 100%;
+    margin-bottom: 10%;
 }
 
 /*******************************

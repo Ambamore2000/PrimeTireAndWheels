@@ -3,28 +3,28 @@
 ********************************/
 
 #nav {
-    background-color: rgb(31, 31, 31);
-    overflow: hidden;
-    position: fixed;
+    padding-top: 2%;
+    padding-bottom: 2%;
     top: 0;
     width: 100%;
+    text-align: center;
+}
+#nav ul{
+    display: inline-block;
 }
 
 #nav a {
-    float: right;
-    color: white;
+    color: #fe7471;
     text-align: center;
     text-transform: uppercase;
-    padding: 1% 1%;
+    padding: 2% 2%;
     text-decoration: none;
 }
 
 #nav a:hover {
-    background-color: white;
-    color: black;
+    text-decoration-line: underline;
 }
 
 #nav a.active {
-    background-color: #FF8080;
-    color: white;
+    font-weight: bold;
 }
