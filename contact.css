@@ -2,12 +2,15 @@
 ********** EXTRA INFO **********
 ********************************/
 
-#extra_info {
-    padding-left: 50px;
-    padding-right: 150px;
+.row {
+    column-count: 2;
 }
 
-#extra_info img, iframe {
-    width: 50%;
-    float: left;
+#business-img {
+    width: 100%;
+}
+
+#map {
+    border:0;
+    width: 100%;
 }
