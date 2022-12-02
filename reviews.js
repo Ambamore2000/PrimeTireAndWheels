@@ -6,6 +6,8 @@ function rate(amount) {
     for (i = 5; i > amount; i--) {
         document.getElementById(i).setAttribute("src", "/img/star-empty.png");
     }
+    let ratingInput = document.getElementById("rating");
+    ratingInput.setAttribute("value", amount);
 }
 
 function attachHandlers() {

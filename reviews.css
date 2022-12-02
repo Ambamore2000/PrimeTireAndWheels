@@ -6,11 +6,30 @@
     margin-right: 5%;
 }
 
-/*
-
- */
 #stars img{
     width: 5%;
+    padding: 0;
+}
+
+#reviews {
+    margin-left: 5%;
+    margin-right: 5%;
+    column-count: 2;
+}
+
+#reviews * {
+    margin: 0;
+    padding: 0;
+}
+
+#reviews img{
+    width: 3%;
+    padding: 0;
+}
+
+#review {
+    padding-top: 2%;
+    padding-bottom: 2%;
 }
 
 .row {

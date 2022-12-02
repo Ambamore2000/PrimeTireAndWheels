@@ -1,5 +1,21 @@
 <?php
 
+$db = new SQLite3('reviews.sqlite', SQLITE3_OPEN_CREATE | SQLITE3_OPEN_READWRITE);
+
+$db->exec(
+    'CREATE TABLE IF NOT EXISTS "reviews" (
+    "email" VARCHAR(100) PRIMARY KEY NOT NULL,
+    "firstName" VARCHAR(50) NOT NULL,
+    "lastName" VARCHAR(50),
+    "rating" INTEGER NOT NULL,
+    "reviewMessage" TEXT NOT NULL,
+    "date" DATE NOT NULL
+  )'
+);
+
+$reviews_sql = $db->prepare("SELECT * FROM 'reviews'");
+$reviews = $reviews_sql->execute();
+
 $rating = $first_name = $last_name = $email = $review_message = "";
 $rating_error = $first_name_error = $last_name_error = $email_error = $review_message_error = "";
 
@@ -53,6 +69,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     if ($is_valid_data) {
+
+        $exec_string = "INSERT INTO 'reviews' VALUES";
+        $exec_string .= "('" . $email . "', '";
+        $exec_string .= $first_name . "', '";
+        $exec_string .= $last_name . "', '";
+        $exec_string .= $rating . "', '";
+        $exec_string .= $review_message . "', '";
+        $exec_string .= date("Y-n-j") . "')";
+
+        echo $exec_string;
+
+        $db->exec($exec_string);
+
         $full_name = $first_name;
         if ($last_name) {
             $full_name .= " " . $last_name;
@@ -62,7 +91,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         $processed_message = "Thank you " . $full_name . " for submitting your review. " .
-            "You have submitted a " . $rating . "/5 review with the message:" . $review_message;
+            "You have submitted a " . $rating . "/5 review with the message: " . $review_message;
     }
 }
 ?>
@@ -111,18 +140,47 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <img src="/img/star-empty.png" id="4" alt="4">
                     <img src="/img/star-empty.png" id="5" alt="5">
                 </div>
+                <input type="hidden" id="rating" name="rating">
                 <span class="error" id="rating_error"><?=$rating_error?>&nbsp;</span>
                 <label>
                     <textarea id="review_message" name="review_message" placeholder="Type your review here..." ></textarea>
                 </label>
                 <span class="error" id="review_message_error"><?=$review_message_error?>&nbsp;</span><br>
                 <input type="submit"/>
-                <br><span><?=$processed_message?></span><br>
+                <br><p><?=$processed_message?></p><br>
             </form>
         </div>
 
         <div class="section">
             <h2>PAST REVIEW</h2>
+            <div id="reviews">
+                <?php while ($review = $reviews->fetchArray(SQLITE3_ASSOC)) {
+                    ?>
+                    <div id="review">
+                        <?php
+                        $name = $review["firstName"];
+                        if ($review["lastName"]) {
+                            $name .= " " . $review["lastName"];
+                        }
+                        ?>
+                        <h3><?= $name ?></h3>
+                        <p><?= $review["date"] ?></p>
+                        <div id="reviews_stars">
+                            <?php
+                            $rating_count = $review["rating"];
+                                for ($x = 0; $x < $rating_count; $x++) {
+                                    ?><img src="/img/star-filled.png" alt="<?=$x + 1?>"><?php
+                                }
+                                for ($x = $rating_count; $x < 5; $x++) {
+                                    ?><img src="/img/star-empty.png" alt="<?=$x + 1?>"><?php
+                                }
+                            ?>
+                        </div>
+                        <p><?= $review["reviewMessage"] ?></p>
+                    </div>
+                    <?php
+                } ?>
+            </div>
         </div>
     </body>
 </html>
