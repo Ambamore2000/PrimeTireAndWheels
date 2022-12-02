@@ -78,8 +78,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $exec_string .= $review_message . "', '";
         $exec_string .= date("Y-n-j") . "')";
 
-        echo $exec_string;
-
         $db->exec($exec_string);
 
         $full_name = $first_name;
