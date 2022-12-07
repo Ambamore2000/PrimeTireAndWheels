@@ -121,10 +121,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="section">
             <h1>REVIEWS</h1>
             <h2>RATING</h2>
-            <div id="rating">
+            <div id="rating_section">
                 <div id="rating_stars">
                     <?php
-                    $rating_count = $average;
+                    $rating_count = floor($average);
                     for ($x = 0; $x < $rating_count; $x++) {
                         ?><img src="/img/star-filled.png" alt="<?=$x + 1?>"><?php
                     }

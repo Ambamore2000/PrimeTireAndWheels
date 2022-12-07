@@ -1,7 +1,7 @@
 /*******************************
 ************ FORM **************
 ********************************/
-#form, #reviews, #rating {
+#form, #reviews, #rating_section {
     margin-left: 5%;
     margin-right: 5%;
 }
@@ -11,7 +11,7 @@
     padding: 0;
 }
 
-#reviews *, #rating * {
+#reviews *, #rating_section * {
     margin: 0;
     padding: 0;
 }
