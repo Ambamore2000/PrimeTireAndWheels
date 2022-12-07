@@ -1,30 +1,8 @@
 <?php
 
-$db = new SQLite3('reviews.sqlite', SQLITE3_OPEN_CREATE | SQLITE3_OPEN_READWRITE);
+include("reviews_sql.php");
 
-$db->exec(
-    'CREATE TABLE IF NOT EXISTS "reviews" (
-    "email" VARCHAR(100) PRIMARY KEY NOT NULL,
-    "firstName" VARCHAR(50) NOT NULL,
-    "lastName" VARCHAR(50),
-    "rating" INTEGER NOT NULL,
-    "reviewMessage" TEXT NOT NULL,
-    "date" DATE NOT NULL
-  )'
-);
-
-$reviews_sql = $db->prepare("SELECT * FROM 'reviews'");
-$reviews = $reviews_sql->execute();
-
-$count_ratings_sql = $db->prepare("SELECT COUNT(email) AS count FROM 'reviews'");
-$count_ratings = $count_ratings_sql->execute();
-
-$count = $count_ratings->fetchArray(SQLITE3_ASSOC)["count"];
-
-$average_ratings_sql = $db->prepare("SELECT AVG(rating) AS average FROM 'reviews'");
-$average_ratings = $average_ratings_sql->execute();
-
-$average = round($average_ratings->fetchArray(SQLITE3_ASSOC)["average"],2);
+$reviews_sql = new Reviews_SQL();
 
 $rating = $first_name = $last_name = $email = $review_message = "";
 $rating_error = $first_name_error = $last_name_error = $email_error = $review_message_error = "";
@@ -80,15 +58,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($is_valid_data) {
 
-        $exec_string = "INSERT INTO 'reviews' VALUES";
-        $exec_string .= "('" . $email . "', '";
-        $exec_string .= $first_name . "', '";
-        $exec_string .= $last_name . "', '";
-        $exec_string .= $rating . "', '";
-        $exec_string .= $review_message . "', '";
-        $exec_string .= date("Y-n-j") . "')";
-
-        $db->exec($exec_string);
+        $reviews_sql->addReview($email, $first_name, $last_name, $rating, $review_message);
 
         $full_name = $first_name;
         if ($last_name) {
@@ -124,7 +94,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div id="rating_section">
                 <div id="rating_stars">
                     <?php
-                    $rating_count = floor($average);
+                    $rating_count = floor($reviews_sql->average);
                     for ($x = 0; $x < $rating_count; $x++) {
                         ?><img src="/img/star-filled.png" alt="<?=$x + 1?>"><?php
                     }
@@ -133,8 +103,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     }
                     ?>
                 </div>
-                <p><?=$average?>/5 STARS</p>
-                <p><?=$count?> TOTAL REVIEWS</p>
+                <p><?=$reviews_sql->average?>/5 STARS</p>
+                <p><?=$reviews_sql->count?> TOTAL REVIEWS</p>
             </div>
         </div>
 
@@ -193,7 +163,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <option value="1">1 stars</option>
             </select>
             <div id="reviews">
-                <?php while ($review = $reviews->fetchArray(SQLITE3_ASSOC)) {
+                <?php while ($review = $reviews_sql->reviews->fetchArray(SQLITE3_ASSOC)) {
                     ?>
                     <div id="review">
                         <?php
