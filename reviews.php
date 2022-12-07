@@ -175,6 +175,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <div class="section">
             <h2>PAST REVIEW</h2>
+            <label for="sort_by"></label>
+            <select name="sort_by" id="sort_by">
+                <option value="none" selected disabled hidden>Sort By</option>
+                <option value="newest">Newest First</option>
+                <option value="oldest">Oldest First</option>
+                <option value="highest">Highest Rated</option>
+                <option value="lowest">Lowest Rated</option>
+            </select>
+            <label for="filter_by"></label>
+            <select name="filter_by" id="filter_by">
+                <option value="none" selected disabled hidden>Filter By</option>
+                <option value="5">5 stars</option>
+                <option value="4">4 stars</option>
+                <option value="3">3 stars</option>
+                <option value="2">2 stars</option>
+                <option value="1">1 stars</option>
+            </select>
             <div id="reviews">
                 <?php while ($review = $reviews->fetchArray(SQLITE3_ASSOC)) {
                     ?>
