@@ -16,6 +16,7 @@
         <div class="section">
             <h1>SERVICES</h1>
             <h2>SERVICES OFFERED</h2>
+            <p id="services_tip">HOVER SERVICE FOR MORE INFO.</p>
             <div id="services">
                 <ul>
                     <?php
