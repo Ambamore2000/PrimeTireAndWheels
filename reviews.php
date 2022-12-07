@@ -16,6 +16,16 @@ $db->exec(
 $reviews_sql = $db->prepare("SELECT * FROM 'reviews'");
 $reviews = $reviews_sql->execute();
 
+$count_ratings_sql = $db->prepare("SELECT COUNT(email) AS count FROM 'reviews'");
+$count_ratings = $count_ratings_sql->execute();
+
+$count = $count_ratings->fetchArray(SQLITE3_ASSOC)["count"];
+
+$average_ratings_sql = $db->prepare("SELECT AVG(rating) AS average FROM 'reviews'");
+$average_ratings = $average_ratings_sql->execute();
+
+$average = round($average_ratings->fetchArray(SQLITE3_ASSOC)["average"],2);
+
 $rating = $first_name = $last_name = $email = $review_message = "";
 $rating_error = $first_name_error = $last_name_error = $email_error = $review_message_error = "";
 
@@ -111,7 +121,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="section">
             <h1>REVIEWS</h1>
             <h2>RATING</h2>
-            <!--TODO: Get Reviews Data; Sum(All Ratings)/5 = Rating -->
+            <div id="rating">
+                <div id="rating_stars">
+                    <?php
+                    $rating_count = $average;
+                    for ($x = 0; $x < $rating_count; $x++) {
+                        ?><img src="/img/star-filled.png" alt="<?=$x + 1?>"><?php
+                    }
+                    for ($x = $rating_count; $x < 5; $x++) {
+                        ?><img src="/img/star-empty.png" alt="<?=$x + 1?>"><?php
+                    }
+                    ?>
+                </div>
+                <p><?=$average?>/5 STARS</p>
+                <p><?=$count?> TOTAL REVIEWS</p>
+            </div>
         </div>
 
         <div class="section">

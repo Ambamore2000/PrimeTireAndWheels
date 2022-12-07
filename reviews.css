@@ -1,7 +1,7 @@
 /*******************************
 ************ FORM **************
 ********************************/
-#form {
+#form, #reviews, #rating {
     margin-left: 5%;
     margin-right: 5%;
 }
@@ -11,18 +11,18 @@
     padding: 0;
 }
 
-#reviews {
-    margin-left: 5%;
-    margin-right: 5%;
-}
-
-#reviews * {
+#reviews *, #rating * {
     margin: 0;
     padding: 0;
 }
 
 #reviews img{
     width: 3%;
+    padding: 0;
+}
+
+#rating_stars img {
+    width: 4%;
     padding: 0;
 }
 
