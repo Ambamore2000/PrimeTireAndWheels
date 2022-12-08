@@ -6,16 +6,14 @@ $reviews_sql = new Reviews_SQL();
 include("reviews_form.php");
 $reviews_form = new Reviews_Form();
 
-if ($_POST["review_form"]) {
+if ($_POST["is_submit"]) {
     if ($reviews_form->validateForm()) {
-
         $reviews_sql->addReview(
             $reviews_form->getEmail(),
             $reviews_form->getFirstName(),
             $reviews_form->getLastName(),
             $reviews_form->getRating(),
             $reviews_form->getReviewMessage());
-
     }
 }
 
@@ -83,6 +81,7 @@ function loadStars($count) {
         <div class="section">
             <h2>LEAVE REVIEW</h2>
             <form id="review_form" action="" method="post">
+                <input type="hidden" id="is_submit" name="is_submit" value="true">
                 <div class="row">
                     <div class="column"> <!-- TODO: Fix usage of &nbsp; -->
                         <label><input type="text" name="first_name" placeholder="First Name"></label><br>

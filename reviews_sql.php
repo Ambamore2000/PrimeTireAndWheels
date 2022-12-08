@@ -64,7 +64,6 @@ class Reviews_SQL {
 
         $query .= " ORDER BY " . $order_rule . " " . $order_order;
 
-        echo $query;
         $reviews_sql = $this->db->prepare($query);
         $this->reviews = $reviews_sql->execute();
     }
