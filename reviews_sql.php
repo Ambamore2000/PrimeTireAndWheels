@@ -2,10 +2,10 @@
 
 class Reviews_SQL {
 
-    public $db;
-    public $count;
-    public $average;
-    public $reviews;
+    private $db;
+    private $count;
+    private $average;
+    private $reviews;
 
     public function __construct() {
         $this->db = new SQLite3('reviews.sqlite', SQLITE3_OPEN_CREATE | SQLITE3_OPEN_READWRITE);
@@ -25,6 +25,18 @@ class Reviews_SQL {
         "reviewMessage" TEXT NOT NULL,
         "date" DATE NOT NULL)'
         );
+    }
+
+    public function getCount() {
+        return $this->count;
+    }
+
+    public function getAverage() {
+        return $this->average;
+    }
+
+    public function getReviews() {
+        return $this->reviews;
     }
 
     private function setCount() {
