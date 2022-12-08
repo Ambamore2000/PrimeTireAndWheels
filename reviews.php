@@ -6,15 +6,38 @@ $reviews_sql = new Reviews_SQL();
 include("reviews_form.php");
 $reviews_form = new Reviews_Form();
 
-if ($reviews_form->validateForm()) {
+if ($_POST["review_form"]) {
+    if ($reviews_form->validateForm()) {
 
-    $reviews_sql->addReview(
+        $reviews_sql->addReview(
             $reviews_form->getEmail(),
             $reviews_form->getFirstName(),
             $reviews_form->getLastName(),
             $reviews_form->getRating(),
             $reviews_form->getReviewMessage());
 
+    }
+}
+
+
+$filter = "";
+if ($_POST["filter_by"]) {
+    $filter = $_POST["filter_by"];
+    $reviews_sql->setReviewsDefault("date", "DESC", $filter);
+}
+
+if ($_POST["sort_by"]) {
+    $sort_power = $_POST["sort_by"];
+
+    if ($sort_power === "newest") {
+        $reviews_sql->setReviewsDefault("date", "DESC", $filter);
+    } else if ($sort_power === "oldest") {
+        $reviews_sql->setReviewsDefault("date", "ASC", $filter);
+    } else if ($sort_power === "highest") {
+        $reviews_sql->setReviewsDefault("rating", "DESC", $filter);
+    } else if ($sort_power === "lowest") {
+        $reviews_sql->setReviewsDefault("rating", "ASC", $filter);
+    }
 }
 
 function loadStars($count) {
@@ -26,6 +49,7 @@ function loadStars($count) {
         ?><img src="/img/star-empty.png" alt="<?=$x + 1?>"><?php
     }
 }
+
 
 ?>
 <!DOCTYPE html>
@@ -59,7 +83,7 @@ function loadStars($count) {
 
         <div class="section">
             <h2>LEAVE REVIEW</h2>
-            <form id="form" action="" method="post">
+            <form id="review_form" action="" method="post">
                 <div class="row">
                     <div class="column"> <!-- TODO: Fix usage of &nbsp; -->
                         <label><input type="text" name="first_name" placeholder="First Name"></label><br>
@@ -94,23 +118,25 @@ function loadStars($count) {
 
         <div class="section">
             <h2>PAST REVIEW</h2>
-            <label for="sort_by"></label>
-            <select name="sort_by" id="sort_by">
-                <option value="none" selected disabled hidden>Sort By</option>
-                <option value="newest">Newest First</option>
-                <option value="oldest">Oldest First</option>
-                <option value="highest">Highest Rated</option>
-                <option value="lowest">Lowest Rated</option>
-            </select>
-            <label for="filter_by"></label>
-            <select name="filter_by" id="filter_by">
-                <option value="none" selected disabled hidden>Filter By</option>
-                <option value="5">5 stars</option>
-                <option value="4">4 stars</option>
-                <option value="3">3 stars</option>
-                <option value="2">2 stars</option>
-                <option value="1">1 stars</option>
-            </select>
+            <form id="past_review_form" action="" method="post">
+                <label for="sort_by"></label>
+                <select name="sort_by" id="sort_by">
+                    <option value="none" selected disabled hidden>Sort By</option>
+                    <option value="newest">Newest First</option>
+                    <option value="oldest">Oldest First</option>
+                    <option value="highest">Highest Rated</option>
+                    <option value="lowest">Lowest Rated</option>
+                </select>
+                <label for="filter_by"></label>
+                <select name="filter_by" id="filter_by">
+                    <option value="none" selected disabled hidden>Filter By</option>
+                    <option value="5">5 stars</option>
+                    <option value="4">4 stars</option>
+                    <option value="3">3 stars</option>
+                    <option value="2">2 stars</option>
+                    <option value="1">1 stars</option>
+                </select>
+            </form>
             <div id="reviews">
                 <?php while ($review = $reviews_sql->getReviews()->fetchArray(SQLITE3_ASSOC)) {
                     ?>

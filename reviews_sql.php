@@ -34,7 +34,6 @@ class Reviews_SQL {
     public function getAverage() {
         return $this->average;
     }
-
     public function getReviews() {
         return $this->reviews;
     }
@@ -45,16 +44,28 @@ class Reviews_SQL {
 
         $this->count = $count_ratings->fetchArray(SQLITE3_ASSOC)["count"];
     }
-
     private function setAverage() {
         $average_ratings_sql = $this->db->prepare("SELECT AVG(rating) AS average FROM 'reviews'");
         $average_ratings = $average_ratings_sql->execute();
 
         $this->average = round($average_ratings->fetchArray(SQLITE3_ASSOC)["average"],2);
     }
-
     private function setReviews() {
         $reviews_sql = $this->db->prepare("SELECT * FROM 'reviews'");
+        $this->reviews = $reviews_sql->execute();
+    }
+
+    public function setReviewsDefault($order_rule, $order_order, $filter = null) {
+        $query = "SELECT * FROM 'reviews'";
+
+        if ($filter) {
+            $query .= " WHERE rating = " . $filter;
+        }
+
+        $query .= " ORDER BY " . $order_rule . " " . $order_order;
+
+        echo $query;
+        $reviews_sql = $this->db->prepare($query);
         $this->reviews = $reviews_sql->execute();
     }
 
