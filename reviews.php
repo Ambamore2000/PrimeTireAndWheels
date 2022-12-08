@@ -18,10 +18,11 @@ if ($reviews_form->validateForm()) {
 }
 
 function loadStars($count) {
-    for ($x = 0; $x < $count; $x++) {
+    $count_int = (int) $count;
+    for ($x = 0; $x < $count_int; $x++) {
         ?><img src="/img/star-filled.png" alt="<?=$x + 1?>"><?php
     }
-    for ($x = $count; $x < 5; $x++) {
+    for ($x = $count_int; $x < 5; $x++) {
         ?><img src="/img/star-empty.png" alt="<?=$x + 1?>"><?php
     }
 }
@@ -48,8 +49,7 @@ function loadStars($count) {
             <div id="rating_section">
                 <div id="rating_stars">
                     <?php
-                    $rating_count = floor($reviews_sql->getAverage());
-                    loadStars($rating_count);
+                    loadStars(floor($reviews_sql->getAverage()));
                     ?>
                 </div>
                 <p><?=$reviews_sql->getAverage()?>/5 STARS</p>
@@ -125,8 +125,7 @@ function loadStars($count) {
                         <p><?= $review["date"] ?></p>
                         <div id="reviews_stars">
                             <?php
-                            $rating_count = $review["rating"];
-                            loadStars($rating_count);
+                            loadStars($review["rating"]);
                             ?>
                         </div>
                         <p><?= $review["reviewMessage"] ?></p>
