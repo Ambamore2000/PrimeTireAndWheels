@@ -17,40 +17,37 @@ html {
 
 h1, h2, img, p, .section, iframe {
     margin: 0 0 0 0;
-    padding: 2%;
+    padding: 1%;
     color: #ffffff ;
 }
 
 .section {
-    padding: 2%;
-    margin-bottom: 8%;
+    padding: 1%;
+    margin-bottom: 4%;
     background: #fe7471;
 }
 
 h1 {
-    font-size: 4vw;
+    font-size: 3vw;
     text-align: center;
     text-decoration-line: underline;
     text-decoration-thickness: 30%;
 }
 
 h2 {
-    font-size: 3vw;
+    font-size: 2.5vw;
     text-decoration-line: underline;
     text-decoration-thickness: 15%;
 }
 
 h3 {
-    font-size: 2.5vw;
+    font-size: 2vw;
     text-decoration-line: underline;
     text-decoration-thickness: 10%;
 }
 
-p, ul, a, input, textarea, span {
-    font-size: 2vw;
-}
-
-.error {
+p, ul, a, input, textarea, span, select {
+    font-size: 1.5vw;
 }
 
 input[type=text], textarea {
@@ -59,4 +56,49 @@ input[type=text], textarea {
 
 input[type=submit] {
     border: 0.25vw white outset;
+}
+
+@media (max-width: 480px) {
+    h1, h2, img, p, .section, iframe {
+        margin: 0 0 0 0;
+        padding: 2%;
+        color: #ffffff ;
+    }
+
+    .section {
+        padding: 2%;
+        margin-bottom: 8%;
+        background: #fe7471;
+    }
+
+    h1 {
+        font-size: 4vw;
+        text-align: center;
+        text-decoration-line: underline;
+        text-decoration-thickness: 30%;
+    }
+
+    h2 {
+        font-size: 3vw;
+        text-decoration-line: underline;
+        text-decoration-thickness: 15%;
+    }
+
+    h3 {
+        font-size: 2.5vw;
+        text-decoration-line: underline;
+        text-decoration-thickness: 10%;
+    }
+
+    p, ul, a, input, textarea, span, select {
+        font-size: 2vw;
+    }
+
+    input[type=text], textarea {
+        border: 0.25vw white inset;
+    }
+
+    input[type=submit] {
+        border: 0.25vw white outset;
+    }
 }

@@ -2,22 +2,22 @@
 ********* NAVIGATION ***********
 ********************************/
 
+#nav ul{
+    display: inline-block;
+}
 #nav {
-    padding-top: 2%;
-    padding-bottom: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%;
     top: 0;
     width: 100%;
     text-align: center;
-}
-#nav ul{
-    display: inline-block;
 }
 
 #nav a {
     color: #fe7471;
     text-align: center;
     text-transform: uppercase;
-    padding: 2% 2%;
+    padding: 1% 1%;
     text-decoration: none;
 }
 
@@ -27,4 +27,22 @@
 
 #nav a.active {
     font-weight: bold;
+}
+
+@media (max-width: 480px) {
+    #nav {
+        padding-top: 2%;
+        padding-bottom: 2%;
+        top: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    #nav a {
+        color: #fe7471;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 2% 2%;
+        text-decoration: none;
+    }
 }
