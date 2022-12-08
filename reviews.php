@@ -19,14 +19,13 @@ if ($_POST["review_form"]) {
     }
 }
 
-
 $filter = "";
-if ($_POST["filter_by"]) {
+if ($_POST["filter_by"] || $_POST["sort_by"]) {
     $filter = $_POST["filter_by"];
-    $reviews_sql->setReviewsDefault("date", "DESC", $filter);
-}
 
-if ($_POST["sort_by"]) {
+    if ($filter == "no_filter") {
+        $filter = "";
+    }
     $sort_power = $_POST["sort_by"];
 
     if ($sort_power === "newest") {
@@ -127,15 +126,22 @@ function loadStars($count) {
                     <option value="highest">Highest Rated</option>
                     <option value="lowest">Lowest Rated</option>
                 </select>
+                <script>
+                    restoreElement("sort_by", "<?= $_POST['sort_by'] ?>");
+                </script>
                 <label for="filter_by"></label>
                 <select name="filter_by" id="filter_by">
                     <option value="none" selected disabled hidden>Filter By</option>
+                    <option value="no_filter">No Filter</option>
                     <option value="5">5 stars</option>
                     <option value="4">4 stars</option>
                     <option value="3">3 stars</option>
                     <option value="2">2 stars</option>
                     <option value="1">1 stars</option>
                 </select>
+                <script>
+                    restoreElement("filter_by", "<?= $_POST['filter_by'] ?>");
+                </script>
             </form>
             <div id="reviews">
                 <?php while ($review = $reviews_sql->getReviews()->fetchArray(SQLITE3_ASSOC)) {

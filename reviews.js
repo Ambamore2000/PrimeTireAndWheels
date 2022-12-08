@@ -1,3 +1,7 @@
+function restoreElement(elementToRestore, old_value) {
+    document.getElementById(elementToRestore).value = old_value;
+}
+
 function rate(amount) {
     let i;
     for (i = amount; i > 0; i--) {
@@ -24,7 +28,7 @@ function sortBy() {
 function filterBy() {
     let filter_value = document.getElementById("filter_by").value;
 
-    if (filter_value >= 1 && filter_value <= 5) {
+    if ((filter_value >= 1 && filter_value <= 5) || filter_value === "no_filter") {
         document.forms.namedItem("past_review_form").submit();
     }
 }
@@ -35,8 +39,8 @@ function attachHandlers() {
     document.getElementById("3").onclick = function () { rate(3) };
     document.getElementById("4").onclick = function () { rate(4) };
     document.getElementById("5").onclick = function () { rate(5) };
-    document.getElementById("sort_by").onclick = function () { sortBy() };
-    document.getElementById("filter_by").onclick = function () { filterBy() };
+    document.getElementById("sort_by").onchange = function () { sortBy() };
+    document.getElementById("filter_by").onchange = function () { filterBy() };
 }
 
 window.addEventListener("load", attachHandlers, true);
